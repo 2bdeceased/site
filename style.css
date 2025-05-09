@@ -1,0 +1,129 @@
+/* Estilos para o modo escuro */
+.dark-mode {
+    background-color: #1a1a1a; /* Cor de fundo escura */
+    color: #7D0404; /* Cor da letra vermelho escuro */
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode a,
+.dark-mode label, /* Adicionando para labels de formulário se houver */
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #7D0404; /* Garante que todos os textos importantes tenham a cor desejada */
+}
+
+.dark-mode .interesse-box {
+    background-color: #222; /* Tom mais escuro para os boxes de interesse */
+    border: 1px solid #333; /* Borda sutil para os boxes */
+    color: #7D0404; /* Cor da letra dentro dos boxes */
+}
+
+.dark-mode .interesse-box i {
+    color: #7D0404; /* Cor dos ícones */
+}
+
+.dark-mode .secao-contato input,
+.dark-mode .secao-contato textarea {
+    background-color: #333; /* Fundo dos campos de formulário */
+    color: #7D0404; /* Cor do texto digitado nos campos */
+    border: 1px solid #555; /* Borda dos campos */
+}
+
+.dark-mode .rodape {
+    background-color: #222; /* Fundo do rodapé */
+    color: #7D0404; /* Cor do texto do rodapé */
+}
+
+/* Estilos para a navegação */
+.navegacao {
+    display: flex; /* Alinha o logo e a lista na mesma linha */
+    align-items: center; /* Alinha verticalmente o logo e a lista */
+    justify-content: flex-end; /* Alinha os itens à direita */
+}
+
+.navegacao ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinha os itens da lista horizontalmente */
+}
+
+.navegacao ul li {
+    margin-left: 20px; /* Espaçamento entre os itens da lista */
+}
+
+.navegacao .logo-nav {
+    margin-left: 20px; /* Adiciona um espaço entre os links e o logo */
+}
+
+.navegacao .logo-nav img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Estilos para o container principal do cabeçalho */
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between; /* Espaça a navegação e as ações do header */
+    align-items: center; /* Alinha verticalmente os itens */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative; /* Define como referência para o posicionamento absoluto do botão */
+}
+
+.acoes-header {
+    display: flex; /* Para alinhar os itens dentro (se houver mais de um) */
+    align-items: center; /* Alinha verticalmente os itens */
+    /* Você pode ajustar a posição usando outras propriedades como margin, padding, etc. */
+}
+
+/* Para telas menores */
+@media (max-width: 768px) {
+    .navegacao .logo-nav img {
+        width: 100px;
+        height: 100px;
+        margin-left: 10px;
+    }
+
+    .navegacao ul li {
+        margin-left: 10px;
+    }
+}
+.secao-contato form {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    gap: 10px; /* Espaçamento entre os itens */
+    width: 100%; /* Ocupa a largura total do container */
+    max-width: 600px; /* Largura máxima do formulário (ajuste conforme necessário) */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+.secao-contato input[type="text"],
+.secao-contato input[type="email"],
+.secao-contato textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que padding e border não aumentem a largura */
+}
+
+/* Para igualar a largura */
+.secao-contato input[type="text"],
+.secao-contato input[type="email"] {
+    flex: 1; /* Faz os campos de texto e email crescerem igualmente */
+}
+
+.secao-contato textarea {
+    /* O textarea ocupará a largura total por padrão no flex-direction: column */
+}
+
+.secao-contato form > div { /* Estilo para o container do botão enviar */
+    display: flex;
+    justify-content: flex-end; /* Alinha o botão à direita */
+}
